@@ -10,37 +10,33 @@ Manipuler les classes :
 
 ### Prérequis
 - Cloner le projet sur votre poste dans le repertoire de votre choix
-- Ouvrir le projet USSI2A-TP3
-    - *File > New > Project from Exiting Sources* (ou *Import Project* si vous êtes sur l'écran d'accueil)
-    - Selectionner le dossier du projet
-    - Selectionner **Create project from existing sources**
-    - Conserver les informations (*Nom, Location, Format*)
-    - IntelliJ détecte que c'est un projet Java
-    - Aucune bibliothèque n'est integtée au projet
-    - IntelliJ créé un modules USSI2A-TP3
-    - Choisir JDK13, s'il n'est pas dans la liste, cliquer sur le <span style="color:green">**+**</span> et selectionner le dossier du JDK 13
-    - Aucun Framework n'est detecté
-    - Aller dans File > Project Structure et Choisir 13 **Project language level**
+- Ouvrir le projet TP3
+  - Sur l'écran d'accueil d'IntelliJ, cliquer sur **New Project**
+  - Selectionner **Java** dans la liste de gauche et **17** dans **Project SDK** puis Next
+  - Ne rien cocher puis **Next**
+  - Cliquer sur les **...** de **Project location** puis selectionner le dossier du projet tp3-xxxxx et cliquer sur **OK**
+  - Cliquer sur **Finish**
+  - Le projet s'ouvre
 
 ### Utilisation de GIT
 
 - Créer une nouvelle branche **prenomNom**
-- Faire **1 commit** par exercice (sauf exercice 0)
+- Faire **1 commit** par exercice
 - Ouvrir **une seule** *pull request* sur github et **ne pas** la fermer/merger !!
 
 ----
 
-### Exercice 0
+### Modalité du TP
 
-- Ouvrir la classe **Exec**
-- Utiliser la méthode *main()* de cette classe pour tester vos développements : Création d'objets, appel de méthodes, etc... au rythme ou vous le desirez, ce n'est pas précisé dans chaque exercice.
+- Utiliser la méthode *main()* de la classe **Exec** pour tester vos développements : Création d'objets, appel de méthodes, etc... au rythme ou vous le desirez, ce n'est pas précisé dans chaque exercice.
 - Toutes les classes des exercices doivent être ajoutées au package **net.lecnam.ussi2a.tp3**
 
 > Si vous ne l'avez pas encore fait, pensez a créer une nouvelle branche **prenomNom**
 
 ### Exercice 1
 
-- Créer une classe **Point**. Ajouter les 2 propriétés d'un point avec le bon type et un constructeur pour initialiser ces 2 propriétés.
+- Créer une classe **Point**. Ajouter les 2 propriétés d'un point avec le bon type. Ces propriétés représent les coordonnées du point.
+- Ajouter un **constructeur** pour initialiser ces 2 propriétés.
 - Écrire une méthode **translate(double x, double y)** qui déplace le point (ajoute les valeurs passées en paramètre aux coordonnées du point)
 - Redéfinir la méthode **equals(Object)** pour tester l'égalité de deux Points. Cette méthode reçoit un objet, il faut le convertir en point avant de faire la comparaison.
 - Redefinir la méthode **toString()** pour qu'elle retourne un String qui décrits les attributs x et y du Point. (peut être que votre IDE peut vous aider...)
@@ -58,7 +54,7 @@ Créer une classe **Rectangle**. Un rectangle possède 2 longeurs (double) et un
 ### Exercice 3
 Dans la classe Rectangle, créer 2 constructeurs prenant respectivement en paramètre : 
 
-- 1 Point (le point d'origine du rectangle) et 2 double (longueurs). 
+- 1 Point (le point d'origine du rectangle) et 2 double (les 2 longueurs). 
 
 - 4 double : les 2 premiers doubles sont les coordonnées du point d'origine et les 2 suivant correspondent aux 2 longueurs.
 
@@ -88,7 +84,7 @@ Dans la classe **Rectangle**
 > Pensez a faire un commit !!
 
 ### Exercice 7
-Créer une classe **Dessin**. Cette classe contient un tableau de 10 Rectangles et une propriété qui indique le nombre de rectangles instanciés dans le dessins.
+Créer une classe **Dessin**. Cette classe contient un tableau (merci de bien utiliser un tableau même si vous connaissez les List) de 10 Rectangles et une propriété qui indique le nombre de rectangles instanciés dans le dessins.
 
 > Pensez a faire un commit !!
 
@@ -124,25 +120,25 @@ Effacer vos tests de la méthode **main()** de la classe **Exec** et :
 
 ### Exercice 12 (bonus)
 
-Créer une classe Carre avec ses propriétés et les mêmes méthodes adaptée au carré que celles de la classe rectangle.
+Sans utiliser l'héritage (pour ceux qui connaissent), créer une classe Carre avec ses propriétés et les mêmes méthodes adaptées au carré que celles de la classe rectangle.
 
 > Pensez a faire un commit !!
 
 ### Exercice 13 (bonus)
 
-Ajouter la prise en charge des carrés dans la classe Dessin. retourneSurface() doit retourner les surfaces total et ajouter une méthode retournePlusGrandCarre()
+Ajouter la prise en charge des carrés dans la classe Dessin. Pensez à utiliser instanceOf pour savoir si l'objet est un carré ou un rectanble. retourneSurface() doit retourner les surfaces total et ajouter une méthode retournePlusGrandCarre()
 
 > Pensez a faire un commit !!
 
 ### Exercice 14 (bonus)
 
-Dans la table rectangle, écrire une méthode **contient(Carre)** qui teste si un carré donné en paramètre est à l'intérieur d'un rectangle (retourne un booléen). 
+Dans la classe rectangle, écrire une méthode **contient(Carre)** qui teste si un carré donné en paramètre est à l'intérieur d'un rectangle (retourne un booléen). 
 
 > Pensez a faire un commit !!
 
 ### Exercice 15 (bonus)
 
-Dans la table Carre, écrire une méthode **contient(Rectangle)** qui teste si un rectangle donné en paramètre est à l'intérieur d'un triangle (retourne un booléen). 
+Dans la classe Carre, écrire une méthode **contient(Rectangle)** qui teste si un rectangle donné en paramètre est à l'intérieur d'un triangle (retourne un booléen). 
 
 > Pensez a faire un commit !!
 
